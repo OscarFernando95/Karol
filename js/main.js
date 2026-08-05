@@ -88,7 +88,7 @@ const CLIENTS = [
     logo: 'media/Cliente1/logo.png',
     instagram: 'https://www.instagram.com/weekend_pitalito/',
     media: [
-      { type: 'image', src: 'media/Cliente1/imagen1.png' }
+      { type: 'image', src: 'media/Cliente1/imagen1.jpg' }
     ]
   },
   {
@@ -98,7 +98,7 @@ const CLIENTS = [
     logo: 'media/Cliente2/logo.png',
     instagram: 'https://www.instagram.com/diamond4c_fit/',
     media: [
-      { type: 'image', src: 'media/Cliente2/imagen1.png' },
+      { type: 'image', src: 'media/Cliente2/imagen1.jpg' },
       { type: 'image', src: 'media/Cliente2/imagen2.jpg' },
       { type: 'video', src: 'media/Cliente2/video1.mp4' },
       { type: 'video', src: 'media/Cliente2/video2.mp4' }
@@ -109,7 +109,6 @@ const CLIENTS = [
     eyebrow: 'Automotriz',
     description: '',
     logo: 'media/Cliente3/logo.png',
-    //instagram: 'https://www.instagram.com/liquimoly.colombia/?hl=es',
     media: [
       { type: 'video', src: 'media/Cliente3/imagen1.mp4' }
     ]
@@ -130,9 +129,7 @@ const CLIENTS = [
     description: 'SALCHIPAPAS, PICADAS & HAMBURGUESAS-MELASSS PITALITO/HUILA 🔥CR 1#13-18/ cambulos ❇️ 3025836985 WhatsApp',
     logo: 'media/Cliente5/logo.png',
     instagram: 'https://www.instagram.com/realthfood_/',
-   media: [
-     {  }
-    ]
+    media: []
   },
   {
     title: 'CDA Ecotech',
@@ -140,9 +137,7 @@ const CLIENTS = [
     description: '☕️| ¿Un Café? Revisión Técnico Mecánica & Emisiones Contaminantes para: 🚘| Vehículos 🏍️| Motos 🛺| Motocarro 📍| Avenida 3 No.10 - 12sur/ Pitalito Huila',
     logo: 'media/Cliente6/logo.png',
     instagram: 'https://www.instagram.com/cda_ecotech/',
-   media: [
-     {  }
-    ]
+    media: []
   },
   {
     title: 'CDA Motozone',
@@ -150,9 +145,7 @@ const CLIENTS = [
     description: '👩🏼‍🔧 | Revisión Técnico Mecánica Motocicletas 🔖 | Soat 📊 | Trámites 🕣 | Lunes - Sábado 7 A.M a 6 P.M 📍 | Calle 2 # 3 - 44 / Pitalito, Huila',
     logo: 'media/Cliente7/logo.png',
     instagram: 'https://www.instagram.com/cdamotozone/',
-   media: [
-     {  }
-    ]
+    media: []
   }
 ];
 

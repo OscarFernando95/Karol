@@ -3,6 +3,7 @@
   --ivory: #f6f1ea;
   --ink: #1b1815;
   --accent: #c98a3f;
+  --accent-text: #8c602c; /* variante oscurecida de --accent: ~4.8:1 sobre --ivory claro (WCAG AA), solo para texto legible */
   --accent-2: #4f5d75;
   --line: rgba(27, 24, 21, 0.12);
 
@@ -18,6 +19,7 @@
     --ivory: #17140f;
     --ink: #f3ede4;
     --line: rgba(243, 237, 228, 0.14);
+    --accent-text: #c98a3f; /* sobre fondo oscuro el --accent original ya cumple contraste */
   }
 }
 
@@ -37,8 +39,26 @@ body {
 
 h1, h2, h3 { font-family: var(--serif); font-weight: 500; margin: 0; }
 p { margin: 0; }
-em { font-style: italic; color: var(--accent); }
+em { font-style: italic; color: var(--accent-text); }
 a { color: inherit; text-decoration: none; }
+
+/* ============ skip link ============ */
+/* oculto hasta que recibe foco por teclado; permite saltar el header/nav */
+.skip-link {
+  position: fixed;
+  top: -60px;
+  left: 1rem;
+  z-index: 300;
+  background: var(--ink);
+  color: var(--ivory);
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: top .2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
 
 /* ============ progress line ============ */
 .progress-line {
@@ -167,7 +187,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 1.2rem;
   font-weight: 500;
 }
@@ -183,7 +203,7 @@ a { color: inherit; text-decoration: none; }
   animation-delay: .15s;
 }
 .hero-title .line { display: block; }
-.line-accent { color: var(--accent); font-style: italic; }
+.line-accent { color: var(--accent-text); font-style: italic; }
 
 @keyframes focus-in {
   to { filter: blur(0); opacity: 1; }
@@ -275,7 +295,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -380,7 +400,7 @@ a { color: inherit; text-decoration: none; }
   opacity: 0.4;
 }
 .method-tracker li { transition: opacity .3s ease, color .3s ease; }
-.method-tracker li.active { opacity: 1; color: var(--accent); font-weight: 600; }
+.method-tracker li.active { opacity: 1; color: var(--accent-text); font-weight: 600; }
 
 .steps-list { position: relative; }
 
@@ -430,7 +450,7 @@ a { color: inherit; text-decoration: none; }
   display: block;
   font-family: var(--serif);
   font-size: 0.95rem;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 0.6rem;
 }
 .step h3 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 0.9rem; }
@@ -500,8 +520,7 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--serif);
   font-style: italic;
   font-size: 0.95rem;
-  color: var(--accent);
-  opacity: 0.6;
+  color: var(--accent-text);
 }
 .service-card h3 { font-size: 1.15rem; margin-bottom: 0.7rem; line-height: 1.25; }
 .service-card p { opacity: 0.8; font-size: 0.95rem; }
@@ -874,7 +893,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.75rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   font-weight: 500;
   margin-bottom: 0.2rem;
 }
@@ -900,7 +919,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.3;
   font-style: italic;
 }
-.statement span { color: var(--accent); }
+.statement span { color: var(--accent-text); }
 
 /* ============ contact ============ */
 .contact {
@@ -1069,4 +1088,27 @@ a { color: inherit; text-decoration: none; }
   /* el botón de cerrar del modal de cliente es absoluto y flota sobre el
      panel — sin este espacio, el icono de Instagram del header queda debajo */
   .client-modal-header { padding-right: 2.6rem; }
+}
+
+/* ============ accesibilidad: prefers-reduced-motion ============ */
+/* apaga animaciones infinitas/decorativas y acorta transiciones para
+   quienes activaron "reducir movimiento" en su sistema operativo */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-title, .hero-sub {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
 }

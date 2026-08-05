@@ -1,0 +1,27 @@
+{
+  "name": "Karol Fonseca — Marca personal & comunicación",
+  "short_name": "Karol Fonseca",
+  "description": "Enfoque y comunicación de marca para marcas personales y empresas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f1ea",
+  "theme_color": "#f6f1ea",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "media/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "media/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "media/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
