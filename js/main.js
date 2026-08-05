@@ -84,7 +84,7 @@ const CLIENTS = [
   {
     title: 'Weekend',
     eyebrow: 'Gastronomía',
-    description: '',
+    description: 'Transformamos cada sorbo en una experiencia única. Disfruta de matcha ceremonial, café de especialidad y delicias frescas. Ambiente relajado y acogedor.',
     logo: 'media/Cliente1/logo.png',
     instagram: 'https://www.instagram.com/weekend_pitalito/',
     media: [
@@ -94,7 +94,7 @@ const CLIENTS = [
   {
     title: 'Diamond 4C Fit',
     eyebrow: 'Fitness',
-    description: '',
+    description: '¡PRÓXIMAMENTE! 🚀La Revolución del Fitness INSCRÍBETE YA! diamond4cfit.com',
     logo: 'media/Cliente2/logo.png',
     instagram: 'https://www.instagram.com/diamond4c_fit/',
     media: [
@@ -105,24 +105,54 @@ const CLIENTS = [
     ]
   },
   {
-    title: 'Liqui Moly',
+    title: 'Grupo GM',
     eyebrow: 'Automotriz',
     description: '',
     logo: 'media/Cliente3/logo.png',
-    instagram: 'https://www.instagram.com/liquimoly.colombia/?hl=es',
+    //instagram: 'https://www.instagram.com/liquimoly.colombia/?hl=es',
     media: [
       { type: 'video', src: 'media/Cliente3/imagen1.mp4' }
     ]
   },
   {
-    title: 'Real Burguer',
+    title: 'Real Burger',
     eyebrow: 'Gastronomía',
-    description: '',
+    description: 'REAL BURGER',
     logo: 'media/Cliente4/logo.png',
     instagram: 'https://www.instagram.com/_realburge12/',
     media: [
       { type: 'video', src: 'media/Cliente4/video1.mp4' }
     ]
+  },
+  {
+    title: 'Realthfood',
+    eyebrow: 'Gastronomía',
+    description: 'SALCHIPAPAS, PICADAS & HAMBURGUESAS-MELASSS PITALITO/HUILA 🔥CR 1#13-18/ cambulos ❇️ 3025836985 WhatsApp',
+    logo: 'media/Cliente5/logo.png',
+    instagram: 'https://www.instagram.com/realthfood_/',
+   // media: [
+     // { type: 'video', src: 'media/Cliente5/video1.mp4' }
+    //]
+  },
+  {
+    title: 'CDA Ecotech',
+    eyebrow: 'Automotriz',
+    description: '☕️| ¿Un Café? Revisión Técnico Mecánica & Emisiones Contaminantes para: 🚘| Vehículos 🏍️| Motos 🛺| Motocarro 📍| Avenida 3 No.10 - 12sur/ Pitalito Huila',
+    logo: 'media/Cliente6/logo.png',
+    instagram: 'https://www.instagram.com/cda_ecotech/',
+   // media: [
+     // { type: 'video', src: 'media/Cliente5/video1.mp4' }
+    //]
+  },
+  {
+    title: 'CDA Motozone',
+    eyebrow: 'Automotriz',
+    description: '👩🏼‍🔧 | Revisión Técnico Mecánica Motocicletas 🔖 | Soat 📊 | Trámites 🕣 | Lunes - Sábado 7 A.M a 6 P.M 📍 | Calle 2 # 3 - 44 / Pitalito, Huila',
+    logo: 'media/Cliente7/logo.png',
+    instagram: 'https://www.instagram.com/cdamotozone/',
+   // media: [
+     // { type: 'video', src: 'media/Cliente5/video1.mp4' }
+    //]
   }
 ];
 
