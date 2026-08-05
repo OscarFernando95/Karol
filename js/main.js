@@ -130,9 +130,9 @@ const CLIENTS = [
     description: 'SALCHIPAPAS, PICADAS & HAMBURGUESAS-MELASSS PITALITO/HUILA 🔥CR 1#13-18/ cambulos ❇️ 3025836985 WhatsApp',
     logo: 'media/Cliente5/logo.png',
     instagram: 'https://www.instagram.com/realthfood_/',
-   // media: [
-     // { type: 'video', src: 'media/Cliente5/video1.mp4' }
-    //]
+   media: [
+     {  }
+    ]
   },
   {
     title: 'CDA Ecotech',
@@ -140,9 +140,9 @@ const CLIENTS = [
     description: '☕️| ¿Un Café? Revisión Técnico Mecánica & Emisiones Contaminantes para: 🚘| Vehículos 🏍️| Motos 🛺| Motocarro 📍| Avenida 3 No.10 - 12sur/ Pitalito Huila',
     logo: 'media/Cliente6/logo.png',
     instagram: 'https://www.instagram.com/cda_ecotech/',
-   // media: [
-     // { type: 'video', src: 'media/Cliente5/video1.mp4' }
-    //]
+   media: [
+     {  }
+    ]
   },
   {
     title: 'CDA Motozone',
@@ -150,9 +150,9 @@ const CLIENTS = [
     description: '👩🏼‍🔧 | Revisión Técnico Mecánica Motocicletas 🔖 | Soat 📊 | Trámites 🕣 | Lunes - Sábado 7 A.M a 6 P.M 📍 | Calle 2 # 3 - 44 / Pitalito, Huila',
     logo: 'media/Cliente7/logo.png',
     instagram: 'https://www.instagram.com/cdamotozone/',
-   // media: [
-     // { type: 'video', src: 'media/Cliente5/video1.mp4' }
-    //]
+   media: [
+     {  }
+    ]
   }
 ];
 
@@ -182,7 +182,10 @@ function playActiveSlide(index) {
 function renderClientMedia(client) {
   clientModalMediaTrack.innerHTML = '';
   clientModalMediaDots.innerHTML = '';
-  const items = client.media || [];
+  const items = (client.media || []).filter(item => item && item.src);
+
+  clientModalMedia.hidden = items.length === 0;
+  if (items.length === 0) return;
 
   items.forEach((item, i) => {
     const slide = document.createElement('div');
